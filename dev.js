@@ -1,7 +1,7 @@
 // semplice web server
 // modulo http
 const http = require('http');
-const port = 8082;
+const port = 7070;
 
 
 // comportamento web server con callback
@@ -14,16 +14,11 @@ const server = http.createServer(function (req, res) {
   } else if (req.url === '/api') {
     res.writeHead(200, {'Content-Type': 'text/html'});
     res.write(JSON.stringify(
-      [
-        {
-          "nome": "Mario",
-          "cognome": "Rossi"
-        },
-        {
-          "nome": "Ken",
-          "cognome": "Norris"
-        }
-      ]
+      {
+        "version": "0.1",
+        "nome": "Mia API personale",
+        "data": "2019-04-26"
+      }
     ));
     res.end();
   }  else {
