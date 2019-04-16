@@ -15,7 +15,7 @@ const server = http.createServer(function (req, res) {
     res.writeHead(200, {'Content-Type': 'text/html'});
     res.write(JSON.stringify(
       {
-        "version": "0.1",
+        "version": "0.2",
         "nome": "Mia API personale",
         "data": "2019-04-26"
       }

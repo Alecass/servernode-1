@@ -16,7 +16,7 @@ const server = http.createServer(function (req, res) {
     res.write(JSON.stringify(
       [
         {
-          "nome": "Mario",
+          "nome": "Gino",
           "cognome": "Rossi"
         },
         {
