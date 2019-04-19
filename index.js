@@ -17,6 +17,20 @@ app.get('/books', function(req, res){
   })
 })
 
+app.get('/users', function(req, res){
+  const filename = 'users.json'
+  fs.readFile(filename, function(e, data) {
+    // 500 Internal Server Error
+    if (e) return res.sendStatus(500)
+    try {
+      users = JSON.parse(data)
+    } catch (e) {
+      res.sendStatus(500)
+    }
+    res.json(users)
+  })
+})
+
 app.get('/settings', function(req, res){
   const filename = 'settings.json'
   fs.readFile(filename, function(e, data) {
