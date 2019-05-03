@@ -4,6 +4,7 @@ const fs = require('fs')
 let port = process.argv[2] || 8080
 
 app.get('/books', function(req, res){
+
   const filename = 'books.json'
   fs.readFile(filename, function(e, data) {
     // 500 Internal Server Error
